@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		My todo app!
+	</title>
+	 <meta name="viewport"  
+      content="width=device-width, initial-scale=1" /> 
+      <link rel = "stylesheet" type = "text/css" href = "{% static 'mytodoapp/delete.css'%}" /> 
+</head>
+<body>
+	<h1 style="color:red;text-align: center;">Welcome to my Todo App!</h1>
+	<hr>
+</br>
+	<h3>You are deleting {{item.taskname}} ?</h3>
+	<div class="button1">
+	<form method="POST">
+		{% csrf_token %}
+	<button class="btn1" type="submit">Delete</button>
+	</form>
+	<br>
+	<button class="btn1" type="submit" onclick="location.href='{% url 'home'%}'">Cancel</button>
+</div>
+	
+</br>
+	
+</body>
+</html>	

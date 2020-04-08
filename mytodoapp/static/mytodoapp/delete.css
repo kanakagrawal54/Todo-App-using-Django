@@ -1,0 +1,14 @@
+
+div button{
+	width:100px;
+	height:40px;
+	margin-left:60px;
+	}
+
+.btn1:hover{
+	color: grey;
+}
+h3{
+	margin-left:30px;
+	font-color:blue;
+}

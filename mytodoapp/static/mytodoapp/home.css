@@ -1,0 +1,29 @@
+
+.tasklist{
+	margin:100px;
+	margin-bottom:20px;
+	margin-top:0px;
+	border:2px solid blue;
+	border-radius: 10px;
+	width:30%;
+	text-align: center;
+	height:200px;
+	background-color:lightblue;
+}
+a{
+	color:black;
+	font-size:25px;
+	margin-left:250px;
+}
+a:hover{
+	color:pink;
+}
+.deletebutton{
+	width:100px;
+	height:40px;
+	cursor:pointer;
+
+}
+.deletebutton:hover{
+	color:grey;
+}
