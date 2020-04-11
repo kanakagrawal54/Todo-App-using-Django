@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .forms import Todoform
 from django.contrib import messages
 from .models import Todomodel
+from django.core.mail import send_mail
 
 # Create your views here.
 def addtask(request):
@@ -12,7 +13,10 @@ def addtask(request):
 		obj.taskname=request.POST.get('taskname')
 		obj.targetdate=request.POST.get('targetdate')
 		obj.taskdescp=request.POST.get('taskdescp')
+		obj.youremail=request.POST.get('youremail')
+		receiver=obj.youremail
 		obj.save()
+		send_mail('Todo App- Task added','hey! congrats you successfully added a task in your todo list','kanakagrawal600@gmail.com',[receiver],fail_silently=False)
 		return redirect('/./')
 	else:
 		form=Todoform()
